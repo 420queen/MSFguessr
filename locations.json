@@ -1,0 +1,148 @@
+[
+  
+{
+  "image": "pictures/pakistan_location.jpg",
+  "lat": 26.0466,
+  "lng": 68.9481,
+  "label": "District de Singhar, Province de Sindh, Pakistan",
+  "detail-picture": "pictures/pakistan_detail.jpg",  
+  "explainer": "Après les importantes inondations survenues au Pakistan en novembre 2022, les équipes MSF préparent et distribuent des biens de première nécessité dans un village près de Sanghar, dans la province du Sindh, au Pakistan. Elles ont également distribué de l'eau potable et des kits d'hygiènes à des miliers de familles."
+},
+{
+  "image": "pictures/afghanistan_location.jpg",
+  "lat": 34.83972,
+  "lng": 67.23083,
+  "label": "Band-e-Amir, Bamyan Province, Afghanistan",
+  "detail-picture": "pictures/afghanistan_detail.jpg",  
+  "explainer": "En 2022, MSF a construit huit cliniques dans la province montagneuse de Bamiyan, en Afghanistan. Ces établissements offrent des soins de santé générale ainsi que des soins maternels et infantiles gratuits dans une région particulièrement reculée."
+},
+{
+  "image": "pictures/yemen_location.jpg",
+  "lat":15.217021,
+  "lng":43.070476,
+  "label": "Ad Dahi, Hodeidah, Yemen",
+  "detail-picture": "pictures/yemen_detail.jpg",  
+  "explainer": "Depuis août 2022, les équipes de MSF à Ad-Dahi prennent en charge les patient·e·s atteint·e·s de diarrhée aqueuse aiguë, dont la grande majorité sont des enfants de moins de cinq ans souffrant de malnutrition aiguë sévère."
+},
+{
+  "image": "pictures/kyrgyzstan_location.jpg",
+  "lat": 40.0626,
+  "lng": 70.8194,
+  "label": "Batken, Kyrgyzstan",
+  "detail-picture": "pictures/kyrgyzstan_detail.jpg",  
+  "explainer": "À la suite de deux conflits avec le Tadjikistan voisin en 2021 et 2022, les équipes MSF ont travaillé à Razzaqov, dans la région de Batken, d'août 2022 à décembre 2023, répondant aux besoins médicaux et de santé mentale des populations marquées par la guerre."
+},
+{
+  "image": "pictures/rdc_location.jpg",
+  "lat": 1.5958,
+  "lng": 29.4179,
+  "label": "Province de l'Ituri, République démocratique du Congo",
+  "detail-picture": "pictures/rdc_detail.jpg",  
+  "explainer": "MSF est l’une des principales organisations humanitaires en Ituri, dans l'est de la RDC. Les équipes MSF apportent une aide médicale d’urgence aux déplacé·e·s et blessé·e·s des conflits dans les hôpitaux de Drodro, Bunia et Angumu, dans des centres de santé répartis dans la province ainsi que dans des camps de déplacé·e·s."
+},
+{
+  "image": "pictures/kiribati_location.jpg",
+  "lat": 1.8500,
+  "lng": 173.0167,
+  "label": "Abaiang, Kiribati",
+  "detail-picture": "pictures/kiribati_detail.jpg",  
+  "explainer": "Dans l’archipel des Kiribati, en plein océan Pacifique, les tempêtes et la montée des eaux salées réduisent la disponibilité en eau douce et en aliments nutritifs. Pour lutter contre les maladies non transmissibles et la malnutrition qui touche particulièrement les femmes en âge de procréer et les enfants de moins de cinq ans, MSF sensibilise les communautés et formes le personnel local."
+},
+{
+  "image": "pictures/sudan_location.jpg",
+  "lat": 13.4528,
+  "lng": 22.4472,
+  "label": "El Geneina, Darfour Ouest, Soudan",
+  "detail-picture": "pictures/sudan_detail.jpg",  
+  "explainer": "Depuis plus de deux ans, les Soudanais·es sont victimes de la guerre civile qui fait rage dans le pays. Au Darfour Ouest, MSF soutient l'hôpital universitaire d'El-Geneina, gérant les services de pédiatrie, d'urgence et d'hospitalisation, ainsi que le centre d'alimentation thérapeutique qui prend en charge les enfants souffrant de malnutrition."
+},
+{
+  "image": "pictures/tchad_location.jpg",
+  "lat": 11.5,
+  "lng": 21,
+  "label": "Camp d'Aboutengue, Tchad",
+  "detail-picture": "pictures/tchad_detail.jpg",  
+  "explainer": "Depuis le début de la guerre civil au Soudan, plus de deux millions de personnes ont fui vers les États voisins, dont le Tchad. Dans la région du Ouaddaï, proche de la frontière avec le Darfour, le camp d’Aboutengué accueille 45 000 et 50 000 réfugié·e·s. L’accès aux biens de première nécessité, ainsi qu’à l’eau et à la nourriture est un défi du quotidien."
+},
+{
+  "image": "pictures/mada_location.jpg",
+  "lat": -20.5833,
+  "lng": 48.5333,
+  "label": "Nosy Varika, Madagascar",
+  "detail-picture": "pictures/mada_detail.jpg",  
+  "explainer": "Madagascar est l'un des pays les plus menacés par le changement climatique. L'île a été frappée par de nombreux cyclones puissants au cours des dernières années, qui aggravent les problèmes de santé des communautés vulnérables. Lors d’évènements climatiques extrêmes, les équipes MSF organise des distributions de kits d'hygiène, et répondent aux besoins médicaux de base."
+},
+{
+  "image": "pictures/bresil_location.jpg",
+  "lat": -3.3539,
+  "lng": -64.7108,
+  "label": "Tefé, État de l'Amazonas, Brésil",
+  "detail-picture": "pictures/bresil_detail.jpg",  
+  "explainer": "Pendant la pandémie de Covid-19, les communautés des villages très reculés de l’État brésilien de l’Amazonas était coupées des soins. Dans les localités les plus touchées, MSF et le ministère de la Santé ont apporté des soins de santé de base grâce à un bateau-clinique, effectuant des dépistages et vaccinations directement dans les maisons."
+},
+{
+  "image": "pictures/mexique_location.jpg",
+  "lat": 19.43,
+  "lng": -99.13,
+  "label": "Mexico city, Mexique",
+  "detail-picture": "pictures/mexique_detail.jpg",  
+  "explainer": "À Mexico, MSF fournit un ensemble de soins complets aux personnes migrantes, qui bien souvent se retrouvent bloquées au Mexique. Via des cliniques mobiles dans les campements informels et les abris où les familles ont trouvé refuge, les équipes proposent une prise en charge médicale et un soutien social."
+},
+{
+  "image": "pictures/ukraine_location.jpg",
+  "lat": 49.2322,
+  "lng": 28.4687,
+  "label": "Vinnytsia, Ukraine",
+  "detail-picture": "pictures/ukraine_detail.jpg",  
+  "explainer": "Depuis l’invasion russe de l’Ukraine en 2022, des millions d'Ukrainien·ne·s vivent avec les blessures invisibles de la guerre : des séquelles psychologiques dont la guérison pourrait prendre des années. Pour répondre à cette urgence de santé mentale, les équipes MSF fournissent à Vinnytsia des services spécialisés de psychothérapie aux personnes souffrant de stress post-traumatique lié à la guerre."
+},
+{
+  "image": "pictures/suisse_location.jpg",
+  "lat": 46.2044,
+  "lng": 6.1432,
+  "label": "Genève, Suisse",
+  "detail-picture": "pictures/suisse_detail.jpg",  
+  "explainer": "Face aux besoins immenses générés par la pandémie de Covid-19 et les confinements, MSF s’est mobilisée aux côtés des organisations locales pour mettre en place des distributions massives de nourritures. Nos équipes médicales sont aussi venues en renfort des services de soins intensifs de l’Hôpital Universitaire de Genève."
+},
+{
+  "image": "pictures/grece_location.jpg",
+  "lat": 37.7543,
+  "lng": 26.9770,
+  "label": "Samos, Grèce",
+  "detail-picture": "pictures/grece_detail.jpg",  
+  "explainer": "Depuis 2021, les équipes MSF à Samos fournissent des soins médicaux d'urgence aux personnes migrantes qui arrivent sur l'île par bateau. Elles offrent des premiers soins médicaux et psychologiques aux personnes qui ont survécu à la traversée dangereuse, et si besoin, un transfert vers un hôpital par ambulance."
+},
+{
+  "image": "pictures/irak_location.jpg",
+  "lat": 36.335,
+  "lng": 43.119,
+  "label": "Mossoul, Irak",
+  "detail-picture": "pictures/irak_detail.jpg",  
+  "explainer": "Bien que le système de santé irakien montre quelques signes d'amélioration, il n'est toujours pas en mesure de répondre pleinement aux besoins médicaux de la population. Mossoul, qui a connu la plus grande bataille urbaine depuis la Seconde Guerre mondiale en 2016-2017 continue de se reconstruire. Dans notre hôpital situé dans le quartier de Nablus à Mossoul Ouest, les équipes MSF offrent des services de maternité, comprenant les accouchements par césarienne, les soins néonatals et les soins pédiatriques d'urgence."
+},
+{
+  "image": "pictures/soudansud_location.jpg",
+  "lat": 9.1618,
+  "lng": 28.3598,
+  "label": "Mayen Abun, Soudan du Sud",
+  "detail-picture": "pictures/soudansud_detail.jpg",  
+  "explainer": "Les besoins sanitaires sont restés extrêmement élevés au Soudan du Sud, en raison des conflits en cours, des déplacements de population, des inondations récurrentes et des épidémies. Dans le nord du pays, MSF soutient l'hôpital de Mayen Abun, ainsi qu’un poste de santé et cinq sites de soins communautaires, notamment pour prendre en charge le paludisme dotn l’incidence est très élevée pendant la saison des pluies."
+},
+{
+  "image": "pictures/honduras_location.jpg",
+  "lat": 14.0818,
+  "lng": -87.2068,
+  "label": "Tegulcigalpa, Honduras",
+  "detail-picture": "pictures/honduras_detail.jpg",  
+  "explainer": "Pour lutter contre la dengue, une maladie transmise par les moustiques, qui touche particulièrement la capitale du Honduras, MSF a collaboré avec le World Mosquito Program, le ministère de la Santé et l'Université nationale du Honduras. Les équipes ont effectué des lâchers de moustiques inoculés avec Wolbachia, une bactérie qui les empêche d'être porteurs de la dengue. Les générations futures de moustiques hériteront de ces bactéries, ce qui perturbera la chaîne de transmission."
+},
+{
+  "image": "pictures/nigeria_location.jpg",
+  "lat": 10.3103,
+  "lng": 9.8439,
+  "label": "Bauchi, Nigeria",
+  "detail-picture": "pictures/nigeria_detail.jpg",  
+  "explainer": "Au Nigeria, les équipes MSF répondent à la malnutrition et aux épidémies de maladies évitables comme le choléra et la fièvre de Lassa, qui sont devenues récurrentes dans le pays, en partie à cause d'une couverture vaccinale extrêmement faible. Les équipent prennent aussi en charge les enfants souffrant de malnutrition dans des centres d'alimentation thérapeutique hospitaliers et ambulatoires tout en formant des agent·e·s de santé communautaire à la détection précoce de la malnutrition et à son traitement."
+}
+
+]

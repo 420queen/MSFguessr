@@ -1,0 +1,448 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Light.woff2') format('woff2'),
+       url('/fonts/Rubik-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Regular.woff2') format('woff2'),
+       url('/fonts/Rubik-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-Bold.woff2') format('woff2'),
+       url('/fonts/Rubik-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-ExtraBold.woff2') format('woff2'),
+       url('/fonts/Rubik-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/Rubik-SemiBold.woff2') format('woff2'),
+       url('/fonts/Rubik-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+#welcomeScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;                      /* ensure full viewport height on mobile */
+    background: radial-gradient(circle, white 0%, rgb(151,231,238) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;              /* keep space below button */
+    box-sizing: border-box;
+    z-index: 2000;
+    animation: fadeIn 1s, gradientPulse 6s ease-in-out infinite;
+}
+
+#welcomeScreen img {
+    max-width: 80%;
+    max-height: calc(100dvh - 200px);  /* keep image from hiding the button */
+}
+
+#welcomeScreen button {
+    margin-top: 20px;
+    margin-bottom: 40px;               /* padding under the button */
+    font-size: 24px;                   /* bigger button text */
+    padding: 12px 32px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes gradientPulse {
+    0%   { background: radial-gradient(circle, white 0%, rgb(151,231,238) 100%); }
+    50%  { background: radial-gradient(circle, white 20%, rgb(151,231,238) 100%); }
+    100% { background: radial-gradient(circle, white 0%, rgb(151,231,238) 100%); }
+}
+
+button, .btn {
+    font-family: 'Rubik';
+    font-weight: 600;
+    background-color: rgb(238, 0, 0);
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    color: white;
+    border-radius: 3px 3px;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#miniMapWrapper {
+    width: 30vw;              /* increased size for large screens */
+    position: fixed;
+    bottom: 45px;
+    right: 5vw;               /* 5% from right edge */
+    transform: translateY(-50%);
+    z-index: 1000;
+    max-width: 840px;         /* accommodate larger display */
+    min-width: 360px;         /* Still usable on mobile */
+}
+
+#miniMap {
+    width: 100%;
+    height: 35vh;             /* slightly taller on large screens */
+    box-shadow: 0px 0px 20px rgba(255,255,255, 0.9);
+    max-height: 600px;
+    min-height: 240px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+}
+
+#guessButton {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgb(238, 0, 0);
+    border-radius: 0 0 8px 8px;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    padding: 10px 0;
+    position: relative;
+    z-index: 2001;
+}
+
+#guessButton:hover {
+    background: rgb(36, 63, 105);
+}
+
+#imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#image {
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  transform-origin: top left;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+#image.grabbing {
+    cursor: grabbing;
+    touch-action: none;
+}
+
+
+#scoreBoard {
+    position: absolute;
+    bottom: 45px;
+    left: 30px;
+    width: 220px;
+    height: 110px;
+    padding: 10px;
+
+    background-color: rgba(38, 63, 105, 0.8); /* bleu avec opacité */
+
+    z-index: 1000;
+    border-radius: 6px;
+
+    color: white;            /* texte en blanc */
+    font-size: 18px;
+    line-height: 0.8;        /* moins d'espacement vertical */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    box-shadow: none;
+}
+
+.scoreNumber {
+    color: rgb(238, 0, 0);
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 767px) {
+    #scoreBoard {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        bottom: auto;
+        right: auto;
+        transform: translateX(-50%);
+        width: auto;
+        height: auto;
+        padding: 5px 10px;
+        display: inline-flex; /* size to content so box remains narrow */
+        flex-wrap: nowrap;
+        gap: 10px;
+        white-space: nowrap;
+        align-items: center;
+    }
+    #scoreBoard .roundScore,
+    #scoreBoard a {
+        display: none;
+    }
+    #scoreBoard br {
+        display: none;
+    }
+}
+
+select {
+    width: 200px;
+}
+
+#scoreBoard .round {
+}
+
+#scoreboard .totalScore {
+}
+
+#roundEnd {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 700px;
+    margin-top: 40px;
+    padding: 40px 0;
+    background: white;
+    border-radius: 8px 8px;
+    text-align: center;
+    display: none;
+    z-index: 1005;
+    box-shadow: 0px 0px 20px rgba(255,255,255, 0.9);
+    
+    overflow-y: auto;
+    max-height: 90vh;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1004;
+}
+
+#roundEnd #roundMap {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  max-height: 400px;
+  min-height: 150px;
+  overflow-y: auto;
+  margin: 20px 0;
+}
+
+
+#roundEnd img.detailPic {
+    width: 100%;
+    max-width: 600px; 	
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#detailContent p {
+    max-width: 550px;
+    font-size: 18px;
+    padding: 20px 5%;
+    text-align: left;
+    line-height: 1.4;
+    hyphens: auto;
+    -webkit-hyphens: auto; /* pour compatibilité Safari */
+    -ms-hyphens: auto;     /* pour compatibilité IE */
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#resultContent h2,
+#detailContent h2 {
+    max-width: 500px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#resultContent p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+ .highlight {
+  color: rgb(238, 0, 0);
+}
+
+
+#roundEnd .detailBtn,
+#roundEnd .nextBtn,
+#roundEnd .backBtn {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#roundEnd .backBtn {
+    margin-right: 10px;
+}
+
+
+#roundEnd .slider {
+    display: flex;
+    width: 200%;
+    transition: transform 0.4s ease;
+    overflow: auto;             /* enables scrolling */
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE 10+ */
+}
+
+    .slider::-webkit-scrollbar {
+    display: none;              /* Chrome, Safari */
+}
+
+#roundEnd .pane {
+    width: 50%;
+    flex-shrink: 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+#roundEnd.show-details .slider {
+    transform: translateX(-50%);
+}
+
+#roundMap {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+#endGame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    margin: -190px 0 0 -240px;
+    padding: 20px;
+    background: #EFEFEF;
+    text-align: center;
+    display: none;
+    z-index: 1000;
+	    
+}
+
+/* Change cursor when mousing over clickable layer */
+.leaflet-clickable {
+  cursor: default !important;
+}
+
+/* Change cursor when over entire map */
+.leaflet-container {
+    cursor: default !important;
+}
+
+@media (max-width: 767px) {
+    /* show the image only in the top half of the viewport */
+    #imageContainer {
+        height: 55vh;
+    }
+
+    /* place the map at the bottom and make it smaller */
+    #miniMapWrapper {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        top: auto;
+        transform: none;
+        height: 45vh;
+    }
+
+    #miniMap {
+        width: 100%;
+        height: calc(100% - 40px);
+	border-radius: 0 !important;
+    }
+
+    /* smaller guess button on small screens */
+    #guessButton {
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    /* make the round result and final result boxes fit the viewport */
+    #roundEnd,
+    #endGame {
+        width: 90%;
+        left: 50%;
+        right: auto;
+        margin: 20px 0 0 0;
+        transform: translateX(-50%);
+    }
+
+    #endGame {
+        top: 50%;
+        margin-top: 0;
+        transform: translate(-50%, -50%);
+	background-color: rgba(255, 255, 255, 0.8); 
+	border-radius: 6px;
+    }
+
+    #roundEnd #roundMap {
+        width: 100%;
+        height: 200px;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MSF GUESSR</title>
+        <link rel='stylesheet' href='css/bootstrap.css' />
+        <link rel='stylesheet' href='css/style.css' />
+        <link rel="stylesheet" href="offline_assets/leaflet/leaflet.css" />
+	<script src="offline_assets/leaflet/leaflet.js"></script>	
+	<script src="offline_assets/protomaps-leaflet.js"></script>
+        <script type='text/javascript' src='offline_assets/jquery-3.7.1.min.js'></script>
+        <script type='text/javascript' src='js/rnd.js'></script>
+        <script type='text/javascript' src='js/minimap.js'></script>
+        <script type='text/javascript' src='js/roundmap.js'></script>
+        <script type='text/javascript' src='js/app.js'></script>
+        <script type='text/javascript' src='js/image_zoom.js' defer></script>
+    </head>
+    <body>
+        <div id="welcomeScreen">
+            <img src="img/screen.svg" alt="Logo" />
+            <button id="startButton" class="btn btn-primary">Commencer</button>
+        </div>
+        <div id='content'>
+            <div id="overlay"></div>
+            <div id="roundEnd"></div>
+            <div id="endGame"></div>
+            <div id='scoreBoard'>
+                <span class='round'>Manche en cours: <b>1/5</b></span><br/>
+                <span class='roundScore'>Score précédent: <b>0</b></span><br/>
+                <span class='totalScore'>Score total: <b>0</b></span>
+            </div>
+            <div id='miniMapWrapper'>
+                <div id='miniMap'></div>
+                <div id='guessButton' class="btn btn-large btn-danger">Valider la localisation</div>
+            </div>
+            <div id="imageContainer">
+                <img id='image' src='' />
+            </div>
+        </div>
+    </body>
+</html>
