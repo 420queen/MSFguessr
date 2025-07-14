@@ -1,0 +1,14 @@
+{
+  "name": "test-guesser",
+  "version": "1.0.0",
+  "description": "Custom msf locations guessing game",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --open=./index.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "keywords": ["game", "map", "wikidata", "leaflet"],
+  "license": "MIT"
+}
