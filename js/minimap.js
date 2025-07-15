@@ -3,7 +3,7 @@ function mminitialize() {
 
     // Add your Protomaps PMTiles vector layer
     protomapsL.leafletLayer({
-        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
+        url: 'offline_assets/planet_z8.pmtiles',
         flavor: "light",
         lang: "fr",
         attribution: "© OpenStreetMap, © Protomaps"
