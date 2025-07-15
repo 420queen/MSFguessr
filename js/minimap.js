@@ -1,10 +1,12 @@
 function mminitialize() {
     mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // Use Protomaps raster tiles
-    L.tileLayer("https://a.tiles.protomaps.com/light/{z}/{x}/{y}.png", {
-        attribution: "© OpenStreetMap, © Protomaps",
-        maxZoom: 16
+    // Use Protomaps vector tiles
+    protomapsL.leafletLayer({
+        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
+        flavor: "light",
+        lang: "fr",
+        attribution: "© OpenStreetMap, © Protomaps"
     }).addTo(mymap);
 
     // Initialize invisible marker
