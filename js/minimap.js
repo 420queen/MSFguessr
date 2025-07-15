@@ -1,16 +1,15 @@
 function mminitialize() {
-    mymap = L.map("miniMap").setView([0, 0], 2);
+    const mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // Use Protomaps vector tiles
+    // ✅ Protomaps vector tiles with light theme
     protomapsL.leafletLayer({
-        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
-        flavor: "light",
-        lang: "fr",
+        url: 'https://tile.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt',
+        theme: protomapsL.themes.LIGHT, 
         attribution: "© OpenStreetMap, © Protomaps"
     }).addTo(mymap);
 
-    // Initialize invisible marker
-    guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
+    // Marker invisible at first
+    const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
     window.guessLatLng = undefined;
 
     // Click handler
