@@ -4,7 +4,7 @@ function mminitialize() {
 L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap, © Protomaps',
     maxZoom: 17
-}).addTo(map);
+}).addTo(mymap);
 
     // Marker invisible at first
     const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
