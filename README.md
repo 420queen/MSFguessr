@@ -1,6 +1,6 @@
 This project previously bundled Leaflet, the Protomaps integration and jQuery
 in the `offline_assets` directory. The game now loads these libraries directly
-from public CDNs so it runs without any local server setup as long as an
+from public CDNs (via jsDelivr and code.jquery.com) so it runs without any local server setup as long as an
 internet connection is available. Simply host the repository on GitHub Pages or
 any static web server and open `index.html` in a browser.
 Place your location photos inside the `img` folder and update `locations.json` accordingly.
