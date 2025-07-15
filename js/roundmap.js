@@ -1,12 +1,10 @@
 function rminitialize() {
     roundmap = L.map("roundMap").setView([30, 8], 1);
 
-    protomapsL.leafletLayer({
-        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
-        flavor: "light",
-        lang: "fr",
-        attribution: "© OpenStreetMap, © Protomaps"
-    }).addTo(roundmap);
+    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
+        attribution: '© Protomaps, © OpenStreetMap contributors',
+        maxZoom: 18
+    }).addTo(mymap);
 
     var guessIcon = L.icon({
         iconUrl: "img/guess.png",
