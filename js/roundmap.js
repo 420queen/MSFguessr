@@ -4,7 +4,7 @@ function rminitialize() {
     L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap, © Protomaps',
         maxZoom: 17
-    }).addTo(map);
+    }).addTo(mymap);
 
     const guessIcon = L.icon({
         iconUrl: "img/guess.png",
