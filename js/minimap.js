@@ -1,12 +1,10 @@
 function mminitialize() {
     const mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // ✅ Protomaps vector tiles with light theme
-    protomapsL.leafletLayer({
-        url: 'https://tile.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt',
-        theme: "light",
-        attribution: "© OpenStreetMap, © Protomaps"
-    }).addTo(mymap);
+L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap, © Protomaps',
+    maxZoom: 17
+}).addTo(map);
 
     // Marker invisible at first
     const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
