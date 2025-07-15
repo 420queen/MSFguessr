@@ -1,9 +1,9 @@
 function mminitialize() {
     mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // Add your Protomaps PMTiles vector layer
+    // Use the online Protomaps tile service
     protomapsL.leafletLayer({
-        url: 'offline_assets/planet_z8.pmtiles',
+        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
         flavor: "light",
         lang: "fr",
         attribution: "© OpenStreetMap, © Protomaps"

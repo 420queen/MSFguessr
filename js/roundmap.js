@@ -1,8 +1,9 @@
 function rminitialize() {
     roundmap = L.map("roundMap").setView([30, 8], 1);
 
+    // Use the online Protomaps tile service
     protomapsL.leafletLayer({
-        url: 'offline_assets/planet_z8.pmtiles',
+        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
         flavor: "light",
         lang: "fr",
         attribution: "© OpenStreetMap, © Protomaps"
