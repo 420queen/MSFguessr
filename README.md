@@ -1,10 +1,14 @@
-This version loads map tiles directly from the Protomaps online service.
-Simply host the project on any static web server and open `index.html` in a browser.
+This project bundles Leaflet, the Protomaps integration and jQuery in the
+`offline_assets` directory so that all scripts are served directly from the
+repository. Simply host the repository on GitHub Pages or any static web server
+and open `index.html` in a browser.
 Place your location photos inside the `img` folder and update `locations.json` accordingly.
 
 ### Map Libraries
 
-The game now references Leaflet **1.9.4** and the Protomaps Leaflet integration **1.15.0** from jsDelivr. jQuery **1.9.1** is included for compatibility with the existing scripts.
+The game uses local copies of Leaflet **1.9.4**, the Protomaps Leaflet
+integration **1.15.0**, and jQuery **3.7.1** found in the `offline_assets`
+folder. Map tiles are retrieved from the public Protomaps online service.
 
 ### Assets
 

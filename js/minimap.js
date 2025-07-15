@@ -1,19 +1,17 @@
 function mminitialize() {
     mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // Add your Protomaps PMTiles vector layer
-    protomapsL.leafletLayer({
-        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
-        flavor: "light",
-        lang: "fr",
-        attribution: "© OpenStreetMap, © Protomaps"
+    // Use Protomaps raster tiles
+    L.tileLayer("https://a.tiles.protomaps.com/light/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap, © Protomaps",
+        maxZoom: 16
     }).addTo(mymap);
 
-    // Initialize marker with opacity 0 (invisible)
+    // Initialize invisible marker
     guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
     window.guessLatLng = undefined;
 
-    // Click handler to update marker and global guess
+    // Click handler
     mymap.on("click", function(e) {
         console.log("Map clicked at", e.latlng);
         const coords = {
@@ -22,7 +20,7 @@ function mminitialize() {
         };
 
         guess2.setLatLng([coords.lat, coords.lng]);
-        guess2.setOpacity(1); // Show the marker after the first click
+        guess2.setOpacity(1);
         window.guessLatLng = coords;
     });
 }
