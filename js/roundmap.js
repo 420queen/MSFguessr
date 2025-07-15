@@ -1,12 +1,10 @@
 function rminitialize() {
     const roundmap = L.map("roundMap").setView([30, 8], 1);
 
-    // ✅ Protomaps vector tiles with light theme
-    protomapsL.leafletLayer({
-        url: 'https://tile.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt',
-        theme: "light",
-        attribution: "© OpenStreetMap, © Protomaps"
-    }).addTo(roundmap);
+    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap, © Protomaps',
+        maxZoom: 17
+    }).addTo(map);
 
     const guessIcon = L.icon({
         iconUrl: "img/guess.png",
