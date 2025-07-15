@@ -4,7 +4,7 @@ function mminitialize() {
     // ✅ Protomaps vector tiles with light theme
     protomapsL.leafletLayer({
         url: 'https://tile.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt',
-        theme: protomapsL.themes.LIGHT, 
+        theme: "light",
         attribution: "© OpenStreetMap, © Protomaps"
     }).addTo(mymap);
 
