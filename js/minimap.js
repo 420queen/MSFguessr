@@ -1,12 +1,9 @@
 function mminitialize() {
     mymap = L.map("miniMap").setView([0, 0], 2);
 
-    // Add your Protomaps PMTiles vector layer
-    protomapsL.leafletLayer({
-        url: 'https://tiles.protomaps.com/tiles/v3/{z}/{x}/{y}.pbf',
-        flavor: "light",
-        lang: "fr",
-        attribution: "© OpenStreetMap, © Protomaps"
+    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
+        attribution: '© Protomaps, © OpenStreetMap contributors',
+        maxZoom: 18
     }).addTo(mymap);
 
     // Initialize marker with opacity 0 (invisible)
