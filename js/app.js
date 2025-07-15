@@ -10,14 +10,14 @@ function startGame() {
 
     // Load locations and initialize maps
     window.fetch('locations.json')
-        .then(response => response.json())
-        .then(data => {
-            locationsPool = shuffleArray(data).slice(0, 5);
+        .then(function(response){ return response.json(); })
+        .then(function(data){
+            locationsPool = shuffleArray(data).slice(0,5);
             svinitialize();
             mminitialize();
         })
-        .catch(err => {
-            console.warn('Erreur de chargement des lieux :', err);
+        .catch(function(err){
+            console.warn('Fetch Error :-S', err);
         });
 
     // Button bindings
