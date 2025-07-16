@@ -1,4 +1,4 @@
-unction mminitialize() {
+function mminitialize() {
     mymap = L.map("miniMap");
     mymap.setView([30, 10], 1);
 
