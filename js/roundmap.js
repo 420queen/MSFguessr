@@ -1,10 +1,8 @@
 function rminitialize() {
     const roundmap = L.map("roundMap").setView([30, 8], 1);
 
-    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap, © Protomaps',
-        maxZoom: 17
-    }).addTo(mymap);
+    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
+    leafletRasterLayer(p).addTo(roundmap);
 
     const guessIcon = L.icon({
         iconUrl: "img/guess.png",
