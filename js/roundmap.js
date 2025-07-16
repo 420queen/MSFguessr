@@ -2,7 +2,7 @@ function rminitialize() {
     roundmap = L.map("roundMap").setView([30, 10], 1);
 
     const protomapsLayer = protomapsL.leafletLayer({
-        url: 'https://api.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt?key=d8045d15a0243832',
+        url: 'https://api.protomaps.com/styles/v5/light/en.json?key=d8045d15a0243832',
         flavor: 'light',
         lang: 'fr'
     });
