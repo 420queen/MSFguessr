@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>MSF GUESSR</title>
-        <link rel='stylesheet' href='css/bootstrap.css' />
-        <link rel='stylesheet' href='css/style.css' />
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-        <script src="https://unpkg.com/protomaps-leaflet@1.0.0"></script>
-        <script type='text/javascript' src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
-        <script type='text/javascript' src='js/rnd.js'></script>
-        <script type='text/javascript' src='js/minimap.js'></script>
-        <script type='text/javascript' src='js/roundmap.js'></script>
-        <script type='text/javascript' src='js/app.js'></script>
-        <script type='text/javascript' src='js/image_zoom.js' defer></script>
-    </head>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MSF GUESSR</title>
+
+    <!-- Styles -->
+    <link rel='stylesheet' href='css/bootstrap.css' />
+    <link rel='stylesheet' href='css/style.css' />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <!-- Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- PMTiles support for raster -->
+    <script src="https://cdn.jsdelivr.net/npm/pmtiles@3.0.0-beta.7/dist/pmtiles.umd.js"></script>
+    <script>
+        const { PMTiles, leafletRasterLayer } = pmtiles;
+    </script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- Internal JS -->
+    <script src="js/rnd.js"></script>
+    <script src="js/minimap.js"></script>
+    <script src="js/roundmap.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/image_zoom.js" defer></script>
+</head>
+
     <body>
         <div id="welcomeScreen">
             <img src="img/screen.svg" alt="Logo" />
