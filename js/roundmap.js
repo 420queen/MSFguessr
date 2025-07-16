@@ -1,33 +1,32 @@
 function rminitialize() {
-    const roundmap = L.map("roundMap").setView([30, 8], 1);
+    roundmap = L.map("roundMap").setView([30, 10], 1);
 
-    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
-    leafletRasterLayer(p).addTo(roundmap);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(roundmap);
 
-    const guessIcon = L.icon({
+    var guessIcon = L.icon({
         iconUrl: "img/guess.png",
-        iconAnchor: [35, 70]
+        iconAnchor: [45, 90]
     });
 
-    const actualIcon = L.icon({
+    var actualIcon = L.icon({
         iconUrl: "img/actual.png",
-        iconAnchor: [35, 70]
+        iconAnchor: [45, 90]
     });
 
-    // Markers, initially hidden
-    const guess = L.marker([0, 0], { icon: guessIcon, opacity: 0 }).addTo(roundmap);
-    const actual = L.marker([0, 0], { icon: actualIcon, opacity: 0 }).addTo(roundmap);
+    guess = L.marker([-999, -999], {
+        icon: guessIcon
+    }).addTo(roundmap)
 
-    // Show if coords are defined
-    if (window.guessLatLng && window.actualLatLng) {
-        guess.setLatLng([window.guessLatLng.lat, window.guessLatLng.lng]).setOpacity(1);
-        actual.setLatLng([window.actualLatLng.lat, window.actualLatLng.lng]).setOpacity(1);
+    actual = L.marker([-999, -999], {
+        icon: actualIcon
+    }).addTo(roundmap)
 
-        // Optional: fit both markers into view
-        const bounds = L.latLngBounds([
-            [window.guessLatLng.lat, window.guessLatLng.lng],
-            [window.actualLatLng.lat, window.actualLatLng.lng]
-        ]);
-        roundmap.fitBounds(bounds, { padding: [40, 40] });
-    }
-}
+    guess.setLatLng(window.guessLatLng);
+    actual.setLatLng(window.actualLatLng);
+    roundmap.fitBounds(L.latLngBounds(guess.getLatLng(), actual.getLatLng()), {
+        padding: [50, 50]
+    });
+};
