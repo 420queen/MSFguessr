@@ -1,10 +1,9 @@
 function rminitialize() {
     roundmap = L.map("roundMap").setView([30, 8], 1);
 
-    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
-        attribution: '© Protomaps, © OpenStreetMap contributors',
-        maxZoom: 18
-    }).addTo(mymap);
+    // PMTiles raster layer from Protomaps
+    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
+    leafletRasterLayer(p).addTo(roundmap);
 
     var guessIcon = L.icon({
         iconUrl: "img/guess.png",
@@ -21,7 +20,6 @@ function rminitialize() {
     actual = L.marker([0, 0], { icon: actualIcon, opacity: 0 }).addTo(roundmap);
 
     // Only place markers if both coordinates are defined.
-    // We'll fit the bounds once the result screen becomes visible
     if (window.guessLatLng && window.actualLatLng) {
         guess.setLatLng([window.guessLatLng.lat, window.guessLatLng.lng]).setOpacity(1);
         actual.setLatLng([window.actualLatLng.lat, window.actualLatLng.lng]).setOpacity(1);
