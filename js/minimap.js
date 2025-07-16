@@ -1,25 +1,18 @@
 function mminitialize() {
     mymap = L.map("miniMap");
+
     mymap.setView([30, 10], 1);
 
-    // PMTiles integration
-    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
-    leafletRasterLayer(p).addTo(mymap);
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(mymap);
 
-    // Marker invisible at first
-    const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
-    window.guessLatLng = undefined;
+    guess2 = L.marker([-999, -999]).addTo(mymap);
+    guess2.setLatLng({lat: -999, lng: -999});
 
-    // Click handler
     mymap.on("click", function(e) {
-        console.log("Map clicked at", e.latlng);
-        const coords = {
-            lat: parseFloat(e.latlng.lat),
-            lng: parseFloat(e.latlng.lng)
-        };
-
-        guess2.setLatLng([coords.lat, coords.lng]);
-        guess2.setOpacity(1);
-        window.guessLatLng = coords;
-    });
-}
+        guess2.setLatLng(e.latlng);
+        window.guessLatLng = e.latlng;
+    })
+};
