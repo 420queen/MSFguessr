@@ -1,10 +1,12 @@
 function rminitialize() {
     roundmap = L.map("roundMap").setView([30, 10], 1);
 
-    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors',
-        maxZoom: 18
-    }).addTo(roundmap);
+   const protomapsLayer = protomapsL.leafletLayer({
+        url: 'https://api.protomaps.com/tiles/v3/{z}/{x}/{y}.mvt?key=d8045d15a0243832',
+       flavor: 'light', // 
+          lang: 'fr' // 
+    });
+    protomapsLayer.addTo(roundmap);
 
     var guessIcon = L.icon({
         iconUrl: "img/guess.png",
