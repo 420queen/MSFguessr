@@ -58,7 +58,7 @@ function startGame() {
             document.getElementById('image').src = "";
 
             svinitialize();
-            guess2.setLatLng([-999, -999]);
+            window.guess2.setLatLng([-999, -999]);
             window.guessLatLng = undefined;
             mymap.setView([0, 0], 2);
         } else {
@@ -168,9 +168,9 @@ function startGame() {
             $('#roundEnd').css({ display: 'block', opacity: 0 });
             const h = $('#resultContent').outerHeight();
             $('#roundEnd').height(h).animate({ opacity: 1 }, 200, () => {
-                if (typeof roundmap !== 'undefined') {
-                    roundmap.invalidateSize();
-                    roundmap.fitBounds(L.latLngBounds(guess.getLatLng(), actual.getLatLng()), { padding: [50, 50] });
+                if (typeof window.roundmap !== 'undefined') {
+                    window.roundmap.invalidateSize();
+                    window.roundmap.fitBounds(L.latLngBounds(window.guess.getLatLng(), window.actual.getLatLng()), { padding: [50, 50] });
                 }
             });
         }, 50);

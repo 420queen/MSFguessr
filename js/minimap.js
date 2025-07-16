@@ -1,4 +1,4 @@
-unction mminitialize() {
+function mminitialize() {
     mymap = L.map("miniMap");
     mymap.setView([30, 10], 1);
 
@@ -7,7 +7,7 @@ unction mminitialize() {
     leafletRasterLayer(p).addTo(mymap);
 
     // Marker invisible at first
-    const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
+    window.guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
     window.guessLatLng = undefined;
 
     // Click handler
@@ -18,8 +18,8 @@ unction mminitialize() {
             lng: parseFloat(e.latlng.lng)
         };
 
-        guess2.setLatLng([coords.lat, coords.lng]);
-        guess2.setOpacity(1);
+        window.guess2.setLatLng([coords.lat, coords.lng]);
+        window.guess2.setOpacity(1);
         window.guessLatLng = coords;
     });
 }
