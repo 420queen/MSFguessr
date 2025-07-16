@@ -1,10 +1,20 @@
-function mminitialize() {
-    mymap = L.map("miniMap").setView([0, 0], 2);
+var myCustomIcon = L.icon({
+    iconUrl: 'img/marker-icon.png',
+    iconRetinaUrl: 'img/marker-icon-2x.png',
+    shadowUrl: 'img/marker-shadow.png',
+    iconSize: [25, 41], // taille par défaut
+    iconAnchor: [12, 41], // centre-bas de l’icône (point de clic)
+    popupAnchor: [0, -41], // optionnel : popup au-dessus de la pointe
+    shadowSize: [41, 41] // taille par défaut de l’ombre
+});
 
-    L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
-        attribution: '© Protomaps, © OpenStreetMap contributors',
-        maxZoom: 18
-    }).addTo(mymap);
+function mminitialize() {
+    mymap = L.map("miniMap");
+    mymap.setView([30, 10], 1);
+
+    // PMTiles integration
+    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
+    leafletRasterLayer(p).addTo(mymap);
 
     // Initialize marker with opacity 0 (invisible)
     guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
@@ -23,3 +33,4 @@ function mminitialize() {
         window.guessLatLng = coords;
     });
 }
+
