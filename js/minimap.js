@@ -1,10 +1,10 @@
-function mminitialize() {
-    const mymap = L.map("miniMap").setView([0, 0], 2);
+unction mminitialize() {
+    mymap = L.map("miniMap");
+    mymap.setView([30, 10], 1);
 
-L.tileLayer('https://tilea.pmaps.fr/raster/v2/light/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap, © Protomaps',
-    maxZoom: 17
-}).addTo(mymap);
+    // PMTiles integration
+    const p = new PMTiles('https://tilea.pmaps.fr/raster/v2/light.pmtiles');
+    leafletRasterLayer(p).addTo(mymap);
 
     // Marker invisible at first
     const guess2 = L.marker([0, 0], { opacity: 0 }).addTo(mymap);
