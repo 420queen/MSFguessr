@@ -19,6 +19,7 @@ function mminitialize() {
 });
 
     guess2 = L.marker([0, 0], { icon: myCustomIcon, opacity: 0 }).addTo(mymap);
+    guess2.setLatLng({lat: -999, lng: -999});
    
     mymap.on("click", function(e) {
         guess2.setLatLng(e.latlng);
@@ -28,6 +29,7 @@ function mminitialize() {
 
     mymap.on("click", function(e) {
         guess2.setLatLng(e.latlng);
+        guess2.setOpacity(1);  // Make marker visible
         window.guessLatLng = e.latlng;
     })
 };
